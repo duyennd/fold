@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class GameView : MonoBehaviour
 {
+    private Sprite sprite;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+#if UNITY_ANDROID
+        Debug.Log("Android");
+#else
+       Debug.Log("other");
+#endif
     }
 }
